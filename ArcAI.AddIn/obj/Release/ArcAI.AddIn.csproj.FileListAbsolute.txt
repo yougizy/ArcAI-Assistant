@@ -1,0 +1,11 @@
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.AddIn.csproj.AssemblyReference.cache
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.AddIn.GeneratedMSBuildEditorConfig.editorconfig
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.AddIn.AssemblyInfoInputs.cache
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.AddIn.AssemblyInfo.cs
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.AddIn.csproj.CoreCompileInputs.cache
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\bin\Release\ArcAI.AddIn.dll
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\bin\Release\ArcAI.AddIn.pdb
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\bin\Release\Newtonsoft.Json.dll
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.Ad.35868188.Up2Date
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.AddIn.dll
+D:\reasonix\ArcAI-Assistant\ArcAI.AddIn\obj\Release\ArcAI.AddIn.pdb

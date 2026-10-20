@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- ArcAI Assistant: ArcMap 10.8 .NET Add-In (x86, CLR 4.5).
+       ESRI assemblies are provided by ArcMap at runtime (Private=false).
+       Override ESRIBin / ESRIGAC if ArcGIS is installed elsewhere. -->
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>ArcAI.AddIn</RootNamespace>
+    <AssemblyName>ArcAI.AddIn</AssemblyName>
+    <Version>1.0.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ESRIBin Condition="'$(ESRIBin)' == ''">D:\ARCGIS\Desktop10.8\bin</ESRIBin>
+    <ESRIGAC Condition="'$(ESRIGAC)' == ''">C:\Windows\Microsoft.NET\assembly\GAC_MSIL</ESRIGAC>
+    <ESRIKey>v4.0_10.8.0.0__8fc3cc631e44ad86</ESRIKey>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.Desktop.AddIns">
+      <HintPath>$(ESRIBin)\ESRI.ArcGIS.Desktop.AddIns.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.System\$(ESRIKey)\ESRI.ArcGIS.System.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.Framework\$(ESRIKey)\ESRI.ArcGIS.Framework.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.SystemUI\$(ESRIKey)\ESRI.ArcGIS.SystemUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.ArcMapUI\$(ESRIKey)\ESRI.ArcGIS.ArcMapUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.Carto\$(ESRIKey)\ESRI.ArcGIS.Carto.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.Geometry\$(ESRIKey)\ESRI.ArcGIS.Geometry.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.Display\$(ESRIKey)\ESRI.ArcGIS.Display.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.Geodatabase\$(ESRIKey)\ESRI.ArcGIS.Geodatabase.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.DataSourcesFile\$(ESRIKey)\ESRI.ArcGIS.DataSourcesFile.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.DataSourcesGDB\$(ESRIKey)\ESRI.ArcGIS.DataSourcesGDB.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster">
+      <HintPath>$(ESRIGAC)\ESRI.ArcGIS.DataSourcesRaster\$(ESRIKey)\ESRI.ArcGIS.DataSourcesRaster.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Python\runner.py" />
+  </ItemGroup>
+
+</Project>

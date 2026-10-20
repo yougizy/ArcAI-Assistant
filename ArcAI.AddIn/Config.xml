@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ArcAI Assistant</Name>
+  <AddInID>{6f2c9d41-8b7a-4c3e-9f10-2d5a7e4b6c81}</AddInID>
+  <Description>AI assistant for ArcMap 10.8. Generates and runs Python 2.7 / arcpy workflows from natural-language requests. API key is stored with Windows DPAPI.</Description>
+  <Version>1.0.0</Version>
+  <Image>Images/ai32.png</Image>
+  <Author>ArcAI</Author>
+  <Company>ArcAI</Company>
+  <Date>10/18/2026</Date>
+  <Targets>
+    <Target name="Desktop" version="10.8" />
+  </Targets>
+  <AddIn language="CLR4.5" library="ArcAI.AddIn.dll" namespace="ArcAI.AddIn">
+    <ArcMap>
+      <Commands>
+        <Button id="ArcAI.ShowButton"
+                class="ShowAIButton"
+                message="Open the ArcAI AI assistant."
+                caption="AI 助手"
+                tip="打开 ArcAI AI 助手"
+                category="ArcAI"
+                image="Images/ai16.png"
+                onDemand="false" />
+      </Commands>
+
+      <Extensions>
+        <Extension id="ArcAI.Extension"
+                   class="AIExtension"
+                   productName="ArcAI Assistant"
+                   showInExtensionDialog="false"
+                   autoLoad="true" />
+      </Extensions>
+
+      <Toolbars>
+        <Toolbar id="ArcAI.Toolbar" caption="ArcAI" showInitially="false">
+          <Items>
+            <Button refID="ArcAI.ShowButton" separator="false" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+
+      <DockableWindows>
+        <DockableWindow id="ArcAI_DockableWindow"
+                        class="AIWindow"
+                        caption="AI 助手"
+                        image="Images/ai16.png" />
+      </DockableWindows>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
