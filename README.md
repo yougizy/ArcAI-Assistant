@@ -28,7 +28,6 @@ ArcAI Assistant 是一个 ArcMap 停靠窗口插件（.NET Add-In + WinForms）�
 - [测试](#测试)
 - [目录结构](#目录结构)
 - [常见问题](#常见问题)
-- [上传 GitHub 前检查](#上传-github-前检查)
 - [License](#license)
 
 ---
